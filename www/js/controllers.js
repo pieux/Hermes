@@ -17,6 +17,12 @@ angular.module('hermes.controllers', [])
         });
     })
 
+    // A simple controller that shows a tapped item's data
+    .controller('PetCtrl', function ($scope, $routeParams, Pets) {
+        // "Pets" is a service returning mock data (services.js)
+        $scope.pet = Pets.get($routeParams.petId);
+    })
+
     // Common Contacts Area controller within Find Dpers tab
     .controller('CommonContactsAreaCtrl', function ($scope, CommonContacts) {
         // "CommonContacts" is a service returning mock data (service.js)
@@ -28,12 +34,11 @@ angular.module('hermes.controllers', [])
         $scope.$on('tab.hidden', function () {
             // Might recycle content here
         });
+    })
 
+    .controller('CommonContactCtrl', function ($scope, $routeParams, CommonContacts) {
+        $scope.commonContact = CommonContacts.get($routeParams.commonContactId);
     })
 
 
-    // A simple controller that shows a tapped item's data
-    .controller('PetCtrl', function ($scope, $routeParams, Pets) {
-        // "Pets" is a service returning mock data (services.js)
-        $scope.pet = Pets.get($routeParams.petId);
-    });
+;

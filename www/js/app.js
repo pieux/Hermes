@@ -29,9 +29,9 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
 
         // if the url matches something like /commonContact/2 then this route
         // will fire off the CommonContactsAreaCtrl controller (controllers.js)
-        $routeProvider.when('/commonContact/:contactId', {
+        $routeProvider.when('/commonContact/:commonContactId', {
             templateUrl: 'templates/commonContact.html',
-            controller: 'CommonContactsAreaCtrl'
+            controller: 'CommonContactCtrl'
         });
 
         // if none of the above routes are met, use this fallback

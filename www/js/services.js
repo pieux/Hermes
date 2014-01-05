@@ -38,9 +38,9 @@ angular.module('hermes.services', [])
             all: function () {
                 return commonContacts;
             },
-            get: function (contactId) {
+            get: function (commonContactId) {
                 // Simple index lookup
-                return commonContacts[contactId];
+                return commonContacts[commonContactId];
             }
         }
     })
