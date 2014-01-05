@@ -1,9 +1,17 @@
 <nav-page title="info.title">
     <content has-header="true" padding="true">
         {{ info.description }}
-        <a class="button button-full button-positive"
+        <a class="button button-full button-stable"
            ng-href="#/home">
             回主页
         </a>
+
+        <div class="item item-body">
+            <img class="full-image" ng-src="{{info.foodImg}}">
+
+            <p>
+                {{info.foodIntro}}
+            </p>
+        </div>
     </content>
 </nav-page>

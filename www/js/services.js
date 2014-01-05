@@ -43,7 +43,9 @@ angular.module('hermes.services', [])
     .factory('NotFound', function () {
         var info = {
             title: "正在开发ing",
-            description: "恭喜你，你是第13位发现这块处女地的勇士!"
+            description: "恭喜你，你是第13位发现这块处女地的勇士!",
+            foodImg: "img/foodImg.jpg",
+            foodIntro: "鲜花饼是一款以云南特有的食用玫瑰花入料的酥饼，是以“花味、云南味”为特色的云南经典点心代表。鲜花饼在云南当地烘焙品牌大都均有销售，其中以嘉华饼屋最富盛名。每年4月，等待鲜花饼的上市早已成为当地人民的共同期待，排着长队等待购买新鲜上市的鲜花饼早已成为司空见惯的景象。"
         };
 
         return {
