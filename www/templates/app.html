@@ -11,6 +11,17 @@
 
             <content has-header="true" has-tabs="true">
 
+                <div class="item item-input-inset" ng-controller="SearchAreaCtrl">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="输入员工姓名开始查找..." ngc-focus="{searching:true}"
+                               ngc-blur="{searching:false}">
+                        <button class="button button-clear" ng-show="searching">
+                            取消
+                        </button>
+                    </label>
+                </div>
+
                 <!--Common Contacts Area -->
                 <div ng-controller="CommonContactsAreaCtrl">
                     <list>

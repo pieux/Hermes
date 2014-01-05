@@ -3,7 +3,7 @@
 // the 2nd parameter is an array or 'requires'
 // 'hermes.services' is found in services.js
 // 'hermes.controllers' is found in controllers.js
-angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'hermes.controllers'])
+angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'hermes.controllers', 'hermes.directives'])
 
     .config(function ($compileProvider) {
         // Needed for routing to work

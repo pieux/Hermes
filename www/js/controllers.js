@@ -4,6 +4,11 @@ angular.module('hermes.controllers', [])
         // Main app controller, empty for the example
     })
 
+    // Search Area controller
+    .controller('SearchAreaCtrl', function ($scope) {
+        $scope.searching = false;
+    })
+
     // Common Contacts Area controller within Find Dpers tab
     .controller('CommonContactsAreaCtrl', function ($scope, CommonContacts) {
         // "CommonContacts" is a service returning mock data (service.js)
