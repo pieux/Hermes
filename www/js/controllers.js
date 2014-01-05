@@ -27,7 +27,7 @@ angular.module('hermes.controllers', [])
         });
         $scope.$on('tab.hidden', function () {
             // Might recycle content here
-        })
+        });
 
     })
 

@@ -13,11 +13,11 @@
             <!--Common Contacts Area -->
             <content has-header="true" has-tabs="true" ng-controller="CommonContactsAreaCtrl">
                 <list>
-                    <item ng-repeat="contact in commonContacts" type="item-text-wrap"
-                          href="#/commonContact/{{contact.id}}">
-                        <h3>{{contact.title}}</h3>
+                    <item ng-repeat="commonContact in commonContacts" type="item-text-wrap"
+                          href="#/commonContact/{{commonContact.id}}">
+                        <h3>{{commonContact.title}}</h3>
 
-                        <p>{{contact.description}}</p>
+                        <p>{{commonContact.description}}</p>
                     </item>
                     </item>
                 </list>
