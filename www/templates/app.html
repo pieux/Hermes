@@ -13,6 +13,9 @@
             <!--Common Contacts Area -->
             <content has-header="true" has-tabs="true" ng-controller="CommonContactsAreaCtrl">
                 <list>
+                    <div class="item item-divider">
+                        常用联系方式
+                    </div>
                     <item ng-repeat="commonContact in commonContacts" type="item-text-wrap"
                           href="#/commonContact/{{commonContact.id}}">
                         <h3>{{commonContact.title}}</h3>
