@@ -20,6 +20,10 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
             controller: 'AppCtrl'
         });
 
+        $routeProvider.when('/', {
+            redirectTo: '/home'
+        });
+
         $routeProvider.when('/commonContact/:commonContactId', {
             templateUrl: 'templates/commonContact.html',
             controller: 'CommonContactCtrl'

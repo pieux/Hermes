@@ -41,7 +41,7 @@ angular.module('hermes.services', [])
     })
 
     .factory('NotFound', function () {
-        var info = {
+        var value = {
             title: "正在开发ing",
             description: "恭喜你，你是第13位发现这块处女地的勇士!",
             foodImg: "img/foodImg.jpg",
@@ -49,8 +49,24 @@ angular.module('hermes.services', [])
         };
 
         return {
-            info: function () {
-                return info;
+            value: function () {
+                return value;
+            }
+        }
+    })
+
+    .factory('Profile', function () {
+        var value = {
+            name: "Pieux Xi",
+            description: "初级程序员/单身自由万岁",
+            avatar: "img/profile.png",
+            department: "业务系统部",
+            mobile: "18616348933"
+        };
+
+        return {
+            value: function () {
+                return value;
             }
         }
     })
