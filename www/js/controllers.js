@@ -22,7 +22,8 @@ angular.module('hermes.controllers', [])
 
     // Contact Detail Page
     .controller('ContactCtrl', function ($scope, $routeParams, Contacts) {
-        $scope.contact = Contacts.get($routeParams.contactId);
+        var contact = Contacts.get($routeParams.contactId);
+        $scope.contact = contact;
     })
 
     .controller('ProfileTabCtrl', function ($scope, Profile) {

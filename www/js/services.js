@@ -25,7 +25,7 @@ angular.module('hermes.services', [])
         var starredContacts = [
             { id: 0, name: 'Aron Wang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true },
             { id: 1, name: 'Tonson Tang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: false },
-            { id: 3, name: 'Jason Ma', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true }
+            { id: 2, name: 'Jason Ma', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true }
         ];
 
         return {
@@ -44,7 +44,7 @@ angular.module('hermes.services', [])
         var contacts = [
             { id: 0, name: 'Aron Wang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true },
             { id: 1, name: 'Tonson Tang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: false },
-            { id: 3, name: 'Jason Ma', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true }
+            { id: 2, name: 'Jason Ma', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true }
         ];
 
         return {

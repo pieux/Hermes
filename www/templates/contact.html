@@ -10,7 +10,8 @@
                 <p>{{contact.description}}</p>
 
                 <div class="item-icon-right">
-                    <i class="icon ion-ios7-star"></i>
+                    <i class="icon"
+                       ng-class="{'ion-ios7-star': contact.starred, 'ion-ios7-star-outline': !contact.starred}"></i>
                 </div>
             </div>
 
