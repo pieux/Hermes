@@ -22,8 +22,13 @@ angular.module('hermes.controllers', [])
 
     // Contact Detail Page
     .controller('ContactCtrl', function ($scope, $routeParams, Contacts) {
-        var contact = Contacts.get($routeParams.contactId);
-        $scope.contact = contact;
+        $scope.contact = Contacts.get($routeParams.contactId);
+
+        $scope.star = function () {
+            $scope.contact.starred = !$scope.contact.starred;
+            // 异步地更新后台
+        }
+
     })
 
     .controller('ProfileTabCtrl', function ($scope, Profile) {
