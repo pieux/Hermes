@@ -7,7 +7,7 @@
     <tabs tabs-style="tabs-icon-top" tabs-type="tabs-stable" animate-nav="false">
 
         <!-- Find Dpers tab -->
-        <tab title="找人" icon="icon ion-ios7-search">
+        <tab title="找人" icon-on="icon ion-ios7-search-strong" icon-off="icon ion-ios7-search">
 
             <content has-header="true" has-tabs="true">
 
@@ -52,7 +52,8 @@
         </tab>
 
         <!-- My Profile tab -->
-        <tab title="我" icon="icon ion-ios7-person-outline" ng-controller="ProfileTabCtrl">
+        <tab title="我" icon-on="icon ion-ios7-person" icon-off="icon ion-ios7-person-outline"
+             ng-controller="ProfileTabCtrl">
             <content has-header="true" has-tabs="true">
                 <!--Basic Info-->
                 <div class="item item-avatar">
@@ -79,7 +80,7 @@
         </tab>
 
         <!-- More tab -->
-        <tab title="更多" icon="icon ion-ios7-more-outline">
+        <tab title="更多" icon-on="icon ion-more" icon-off="icon ion-ios7-more-outline">
             <content has-header="true" has-tabs="true">
                 <list>
                     <a class="item" href="#/updateVersion">
