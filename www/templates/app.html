@@ -19,14 +19,15 @@
                             常用联系方式
                         </div>
 
-                        <item ng-repeat="commonContact in commonContacts" type="item-text-wrap"
-                              ng-href="#/commonContact/{{commonContact.id}}">
-                            <img ng-src="{{commonContact.avatar}}">
+                        <div ng-repeat="commonContact in commonContacts">
+                            <a class="item item-avatar" ng-href="#/commonContact/{{commonContact.id}}">
+                                <img ng-src="{{commonContact.avatar}}">
 
-                            <h3>{{commonContact.title}}</h3>
+                                <h3>{{commonContact.title}}</h3>
 
-                            <p>{{commonContact.description}}</p>
-                        </item>
+                                <p>{{commonContact.description}}</p>
+                            </a>
+                        </div>
                     </list>
                 </div>
 
@@ -36,14 +37,15 @@
                         <div class="item item-divider">
                             已收藏联系人
                         </div>
-                        <item ng-repeat="starredContact in starredContacts" type="item-text-wrap"
-                              href="#/starredContact/{{starredContact.id}}">
-                            <img ng-src="{{starredContact.avatar}}">
+                        <div ng-repeat="starredContact in starredContacts">
+                            <a class="item item-avatar" ng-href="#/starredContact/{{starredContact.id}}">
+                                <img ng-src="{{starredContact.avatar}}">
 
-                            <h3>{{starredContact.title}}</h3>
+                                <h3>{{starredContact.title}}</h3>
 
-                            <p>{{starredContact.description}}</p>
-                        </item>
+                                <p>{{starredContact.description}}</p>
+                            </a>
+                        </div>
                     </list>
                 </div>
 
