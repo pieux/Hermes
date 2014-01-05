@@ -10,9 +10,9 @@
         <!-- Find Dpers tab -->
         <tab title="找人" icon="icon ion-ios7-search">
 
-            <!--Common Contacts Area -->
             <content has-header="true" has-tabs="true">
 
+                <!--Common Contacts Area -->
                 <div ng-controller="CommonContactsAreaCtrl">
                     <list>
                         <div class="item item-divider">
@@ -55,22 +55,30 @@
         <!-- My Profile tab -->
         <tab title="我" icon="icon ion-ios7-person-outline">
             <content has-header="true" has-tabs="true">
-                <div class="padding">
-                    <h2>Adopt a pet today.</h2>
-                </div>
-                <div class="list list-inset">
-                    <label class="item item-input">
-                        <span class="input-label">Your name</span>
-                        <input type="text">
-                    </label>
-                    <label class="item item-input">
-                        <span class="input-label">Your email</span>
-                        <input type="password">
-                    </label>
-                    <label class="item item-input">
-                        <textarea placeholder="Any more info?"></textarea>
-                    </label>
-                    <button class="button button-positive button-block">Adopt</button>
+                <div class="content has-header cards-bg">
+
+                    <!--Basic Info-->
+                    <div class="list">
+
+                        <div class="item item-avatar">
+                            <img src="/img/profile.png">
+
+                            <h2>Pieux Xi</h2>
+
+                            <p>初级程序员</p>
+                        </div>
+
+                        <li class="item item-icon-left">
+                            <i class="icon ion-ios7-people"></i>部门
+                            <span class="item-note">业务系统部</span>
+                        </li>
+
+                        <li class="item item-icon-left">
+                            <i class="icon ion-ios7-telephone"></i>电话
+                            <span class="item-note">18616348933</span>
+                        </li>
+
+                    </div>
                 </div>
             </content>
         </tab>
