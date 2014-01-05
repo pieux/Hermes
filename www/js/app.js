@@ -34,6 +34,11 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
             controller: 'StarredContactCtrl'
         });
 
+        $routeProvider.when('/contact/:contactId', {
+            templateUrl: 'templates/contact.html',
+            controller: 'ContactCtrl'
+        });
+
         $routeProvider.when('/404', {
             templateUrl: 'templates/404.html',
             controller: 'NotFoundCtrl'

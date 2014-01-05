@@ -25,6 +25,11 @@ angular.module('hermes.controllers', [])
         $scope.starredContact = StarredContacts.get($routeParams.starredContactId);
     })
 
+    // Contact Detail Page
+    .controller('ContactCtrl', function ($scope, $routeParams, Contacts) {
+        $scope.contact = Contacts.get($routeParams.contactId);
+    })
+
     .controller('ProfileTabCtrl', function ($scope, Profile) {
         $scope.profile = Profile.value();
     })

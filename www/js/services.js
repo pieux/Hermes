@@ -23,10 +23,9 @@ angular.module('hermes.services', [])
     .factory('StarredContacts', function () {
         // Some faking testing data
         var starredContacts = [
-            { id: 0, title: 'Aron Wang', avatar: "img/avatar.png", description: 'Furry little creatures. Obsessed with plotting assassination, but never following through on it.' },
-            { id: 1, title: 'Tonson Tang', avatar: "img/avatar.png", description: 'Lovable. Loyal almost to a fault. Smarter than they let on.' },
-            { id: 2, title: 'Jason Ma', avatar: "img/avatar.png", description: 'Everyone likes turtles.' },
-            { id: 3, title: 'Pieux Xi', avatar: "img/avatar.png", description: 'An advanced pet. Needs millions of gallons of salt water. Will happily eat you.' }
+            { id: 0, name: 'Aron Wang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true },
+            { id: 1, name: 'Tonson Tang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: false },
+            { id: 3, name: 'Jason Ma', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true }
         ];
 
         return {
@@ -36,6 +35,24 @@ angular.module('hermes.services', [])
             get: function (starredContactId) {
                 // Simple index lookup
                 return starredContacts[starredContactId];
+            }
+        }
+    })
+
+    .factory('Contacts', function () {
+        // Some faking testing data
+        var contacts = [
+            { id: 0, name: 'Aron Wang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true },
+            { id: 1, name: 'Tonson Tang', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: false },
+            { id: 3, name: 'Jason Ma', avatar: "img/avatar.png", description: '我们都是好孩子!', department: '业务系统部', mobile: '18613145120', starred: true }
+        ];
+
+        return {
+            all: function () {
+                return contacts;
+            },
+            get: function (contactId) {
+                return contacts[contactId];
             }
         }
     })

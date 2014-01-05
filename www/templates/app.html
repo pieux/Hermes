@@ -37,10 +37,10 @@
                             星标联系人
                         </div>
                         <div ng-repeat="starredContact in starredContacts">
-                            <a class="item item-avatar" ng-href="#/starredContact/{{starredContact.id}}">
+                            <a class="item item-avatar" ng-href="#/contact/{{starredContact.id}}">
                                 <img ng-src="{{starredContact.avatar}}">
 
-                                <h3>{{starredContact.title}}</h3>
+                                <h3>{{starredContact.name}}</h3>
 
                                 <p>{{starredContact.description}}</p>
                             </a>
@@ -67,15 +67,15 @@
                 <div class="item item-divider">
                 </div>
 
-                <li class="item item-icon-left">
+                <div class="item item-icon-left">
                     <i class="icon ion-ios7-people"></i>部门
                     <span class="item-note">{{profile.department}}</span>
-                </li>
+                </div>
 
-                <li class="item item-icon-left">
+                <div class="item item-icon-left">
                     <i class="icon ion-ios7-telephone"></i>手机
                     <span class="item-note">{{profile.mobile}}</span>
-                </li>
+                </div>
             </content>
         </tab>
 

@@ -1,0 +1,39 @@
+<nav-page title="starredContact.title">
+    <content has-header="true">
+        <!--Basic Info-->
+        <div class="list">
+            <div class="item item-avatar">
+                <img ng-src="{{contact.avatar}}">
+
+                <h2>{{contact.name}}</h2>
+
+                <p>{{contact.description}}</p>
+
+                <div class="item-icon-right">
+                    <i class="icon ion-ios7-star"></i>
+                </div>
+            </div>
+
+            <div class="item item-divider">
+            </div>
+
+            <div class="item item-icon-left">
+                <i class="icon ion-ios7-people"></i>部门
+                <span class="item-note">{{contact.department}}</span>
+            </div>
+
+            <div class="item item-icon-left">
+                <i class="icon ion-ios7-telephone"></i>手机
+                <span class="item-note">{{contact.mobile}}</span>
+            </div>
+        </div>
+
+        <div class="button-bar">
+            <a class="button"> 拨打 </a>
+            <a class="button"> 短信 </a>
+        </div>
+
+    </content>
+</nav-page>
+
+
