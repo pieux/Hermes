@@ -20,13 +20,6 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
             controller: 'AppCtrl'
         });
 
-        // if the url matches something like /pet/2 then this route
-        // will fire off the PetCtrl controller (controllers.js)
-        $routeProvider.when('/pet/:petId', {
-            templateUrl: 'templates/pet.html',
-            controller: 'PetCtrl'
-        });
-
         $routeProvider.when('/commonContact/:commonContactId', {
             templateUrl: 'templates/commonContact.html',
             controller: 'CommonContactCtrl'
@@ -37,10 +30,14 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
             controller: 'StarredContactCtrl'
         });
 
+        $routeProvider.when('/404', {
+            templateUrl: 'templates/404.html',
+            controller: 'NotFoundCtrl'
+        });
+
         // if none of the above routes are met, use this fallback
-        // which executes the 'AppCtrl' controller (controllers.js)
         $routeProvider.otherwise({
-            redirectTo: '/home'
+            redirectTo: '/404'
         });
 
     });

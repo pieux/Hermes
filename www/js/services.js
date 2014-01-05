@@ -39,4 +39,17 @@ angular.module('hermes.services', [])
             }
         }
     })
+
+    .factory('NotFound', function () {
+        var info = {
+            title: "正在开发ing",
+            description: "恭喜你，你是第13位发现这块处女地的勇士!"
+        };
+
+        return {
+            info: function () {
+                return info;
+            }
+        }
+    })
 ;

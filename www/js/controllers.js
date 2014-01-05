@@ -53,7 +53,11 @@ angular.module('hermes.controllers', [])
     })
 
     .controller('StarredContactCtrl', function ($scope, $routeParams, StarredContacts) {
-        $scope.starredContact = StarredContacts.get($routeParams.starredContactId);
+        console.log(StarredContacts.get($routeParams.starredContactId));
+    })
+
+    .controller('NotFoundCtrl', function ($scope, NotFound) {
+        $scope.info = NotFound.info();
     })
 
 ;
