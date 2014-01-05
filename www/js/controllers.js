@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('hermes.controllers', [])
 
 .controller('AppCtrl', function($scope) {
   // Main app controller, empty for the example
