@@ -29,11 +29,6 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
             controller: 'CommonContactCtrl'
         });
 
-        $routeProvider.when('/starredContact/:starredContactId', {
-            templateUrl: 'templates/starredContact.html',
-            controller: 'StarredContactCtrl'
-        });
-
         $routeProvider.when('/contact/:contactId', {
             templateUrl: 'templates/contact.html',
             controller: 'ContactCtrl'

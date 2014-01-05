@@ -20,11 +20,6 @@ angular.module('hermes.controllers', [])
         $scope.starredContacts = StarredContacts.all();
     })
 
-    // Starred Contact Detail Page
-    .controller('StarredContactCtrl', function ($scope, $routeParams, StarredContacts) {
-        $scope.starredContact = StarredContacts.get($routeParams.starredContactId);
-    })
-
     // Contact Detail Page
     .controller('ContactCtrl', function ($scope, $routeParams, Contacts) {
         $scope.contact = Contacts.get($routeParams.contactId);
