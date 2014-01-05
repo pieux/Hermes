@@ -1,6 +1,5 @@
 <nav-page id="app-page">
 
-
     <!--
     Create tabs with an icon and text label, using the tabs-positive style (blue by default),
     and disabling header title animation when switching tabs.
@@ -68,6 +67,9 @@
                             <p>初级程序员</p>
                         </div>
 
+                        <div class="item item-divider">
+                        </div>
+
                         <li class="item item-icon-left">
                             <i class="icon ion-ios7-people"></i>部门
                             <span class="item-note">业务系统部</span>
@@ -85,12 +87,15 @@
 
         <!-- More tab -->
         <tab title="更多" icon="icon ion-ios7-more-outline">
-            <content has-header="true" has-tabs="true" padding="true">
-                <h3>About this app</h3>
-
-                <p>
-                    This is a sample seed project for the Ionic Framework. Please change it to match your needs.
-                </p>
+            <content has-header="true" has-tabs="true">
+                <list>
+                    <a class="item" href="#">
+                        版本更新
+                    </a>
+                    <a class="item" href="#">
+                        清除缓存
+                    </a>
+                </list>
             </content>
         </tab>
 
