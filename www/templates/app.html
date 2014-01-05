@@ -18,8 +18,11 @@
                         <div class="item item-divider">
                             常用联系方式
                         </div>
+
                         <item ng-repeat="commonContact in commonContacts" type="item-text-wrap"
-                              href="#/commonContact/{{commonContact.id}}">
+                              ng-href="#/commonContact/{{commonContact.id}}">
+                            <img ng-src="{{commonContact.avatar}}">
+
                             <h3>{{commonContact.title}}</h3>
 
                             <p>{{commonContact.description}}</p>
@@ -35,6 +38,8 @@
                         </div>
                         <item ng-repeat="starredContact in starredContacts" type="item-text-wrap"
                               href="#/starredContact/{{starredContact.id}}">
+                            <img ng-src="{{starredContact.avatar}}">
+
                             <h3>{{starredContact.title}}</h3>
 
                             <p>{{starredContact.description}}</p>
