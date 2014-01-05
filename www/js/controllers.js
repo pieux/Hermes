@@ -40,5 +40,20 @@ angular.module('hermes.controllers', [])
         $scope.commonContact = CommonContacts.get($routeParams.commonContactId);
     })
 
+    // Starred Contacts Area controller within Find Dpers tab
+    .controller('StarredContactsAreaCtrl', function ($scope, StarredContacts) {
+        $scope.starredContacts = StarredContacts.all();
+
+        $scope.$on('tab.shown', function () {
+            // Might do a load here
+        });
+        $scope.$on('tab.hidden', function () {
+            // Might recycle content here
+        });
+    })
+
+    .controller('StarredContactCtrl', function ($scope, $routeParams, StarredContacts) {
+        $scope.starredContact = StarredContacts.get($routeParams.starredContactId);
+    })
 
 ;

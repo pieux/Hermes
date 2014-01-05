@@ -11,21 +11,40 @@
         <tab title="找人" icon="icon ion-ios7-search">
 
             <!--Common Contacts Area -->
-            <content has-header="true" has-tabs="true" ng-controller="CommonContactsAreaCtrl">
-                <list>
-                    <div class="item item-divider">
-                        常用联系方式
-                    </div>
-                    <item ng-repeat="commonContact in commonContacts" type="item-text-wrap"
-                          href="#/commonContact/{{commonContact.id}}">
-                        <h3>{{commonContact.title}}</h3>
+            <content has-header="true" has-tabs="true">
 
-                        <p>{{commonContact.description}}</p>
-                    </item>
-                    </item>
-                </list>
+                <div ng-controller="CommonContactsAreaCtrl">
+                    <list>
+                        <div class="item item-divider">
+                            常用联系方式
+                        </div>
+                        <item ng-repeat="commonContact in commonContacts" type="item-text-wrap"
+                              href="#/commonContact/{{commonContact.id}}">
+                            <h3>{{commonContact.title}}</h3>
+
+                            <p>{{commonContact.description}}</p>
+                        </item>
+                        </item>
+                    </list>
+                </div>
+
+                <!--Starred Contacts Area -->
+                <div ng-controller="StarredContactsAreaCtrl">
+                    <list>
+                        <div class="item item-divider">
+                            已收藏联系人
+                        </div>
+                        <item ng-repeat="starredContact in starredContacts" type="item-text-wrap"
+                              href="#/starredContact/{{starredContact.id}}">
+                            <h3>{{starredContact.title}}</h3>
+
+                            <p>{{starredContact.description}}</p>
+                        </item>
+                        </item>
+                    </list>
+                </div>
+
             </content>
-
         </tab>
 
         <!-- My Profile tab -->

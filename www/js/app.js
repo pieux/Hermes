@@ -27,11 +27,14 @@ angular.module('hermes', ['ionic', 'ngRoute', 'ngAnimate', 'hermes.services', 'h
             controller: 'PetCtrl'
         });
 
-        // if the url matches something like /commonContact/2 then this route
-        // will fire off the CommonContactsAreaCtrl controller (controllers.js)
         $routeProvider.when('/commonContact/:commonContactId', {
             templateUrl: 'templates/commonContact.html',
             controller: 'CommonContactCtrl'
+        });
+
+        $routeProvider.when('/starredContact/:starredContactId', {
+            templateUrl: 'templates/starredContact.html',
+            controller: 'StarredContactCtrl'
         });
 
         // if none of the above routes are met, use this fallback

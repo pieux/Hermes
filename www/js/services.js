@@ -44,4 +44,24 @@ angular.module('hermes.services', [])
             }
         }
     })
+
+    .factory('StarredContacts', function () {
+        // Some faking testing data
+        var starredContacts = [
+            { id: 0, title: 'Aron Wang', description: 'Furry little creatures. Obsessed with plotting assassination, but never following through on it.' },
+            { id: 1, title: 'Tonson Tang', description: 'Lovable. Loyal almost to a fault. Smarter than they let on.' },
+            { id: 2, title: 'Jason Ma', description: 'Everyone likes turtles.' },
+            { id: 3, title: 'Pieux Xi', description: 'An advanced pet. Needs millions of gallons of salt water. Will happily eat you.' }
+        ];
+
+        return {
+            all: function () {
+                return starredContacts;
+            },
+            get: function (starredContactId) {
+                // Simple index lookup
+                return starredContacts[starredContactId];
+            }
+        }
+    })
 ;
