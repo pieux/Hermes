@@ -7,8 +7,8 @@
   -->
   <tabs tabs-style="tabs-icon-top" tabs-type="tabs-positive" animate-nav="false">
 
-    <!-- Pets tab -->
-    <tab title="Pets" icon="icon ion-home" ng-controller="PetsTabCtrl">
+    <!-- Find Dpers tab -->
+    <tab title="找人" icon="icon ion-ios7-search" ng-controller="PetsTabCtrl">
       <content has-header="true" has-tabs="true">
         <list>
           <item ng-repeat="pet in pets" type="item-text-wrap" href="#/pet/{{pet.id}}">
@@ -20,8 +20,8 @@
       </content>
     </tab>
 
-    <!-- Adoption tab -->
-    <tab title="Adopt" icon="icon ion-heart">
+    <!-- My Profile tab -->
+    <tab title="我" icon="icon ion-ios7-person-outline">
       <content has-header="true" has-tabs="true">
         <div class="padding">
           <h2>Adopt a pet today.</h2>
@@ -43,8 +43,8 @@
       </content>
     </tab>
 
-    <!-- Home tab -->
-    <tab title="About" icon="icon ion-search">
+    <!-- More tab -->
+    <tab title="更多" icon="icon ion-ios7-more-outline">
       <content has-header="true" has-tabs="true" padding="true">
         <h3>About this app</h3>
         <p>
