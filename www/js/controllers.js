@@ -8,13 +8,6 @@ angular.module('hermes.controllers', [])
     .controller('CommonContactsAreaCtrl', function ($scope, CommonContacts) {
         // "CommonContacts" is a service returning mock data (service.js)
         $scope.commonContacts = CommonContacts.all();
-
-        $scope.$on('tab.shown', function () {
-            // Might do a load here
-        });
-        $scope.$on('tab.hidden', function () {
-            // Might recycle content here
-        });
     })
 
     // Common Contact Detail Page
@@ -25,13 +18,6 @@ angular.module('hermes.controllers', [])
     // Starred Contacts Area controller within Find Dpers tab
     .controller('StarredContactsAreaCtrl', function ($scope, StarredContacts) {
         $scope.starredContacts = StarredContacts.all();
-
-        $scope.$on('tab.shown', function () {
-            // Might do a load here
-        });
-        $scope.$on('tab.hidden', function () {
-            // Might recycle content here
-        });
     })
 
     // Starred Contact Detail Page
