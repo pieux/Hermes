@@ -1,57 +1,108 @@
 <nav-page id="app-page">
 
+    <!--
+    Create tabs with an icon and text label, using the tabs-positive style (blue by default),
+    and disabling header title animation when switching tabs.
+    -->
+    <tabs tabs-style="tabs-icon-top" tabs-type="tabs-stable" animate-nav="false">
 
-  <!--
-  Create tabs with an icon and text label, using the tabs-positive style (blue by default),
-  and disabling header title animation when switching tabs.
-  -->
-  <tabs tabs-style="tabs-icon-top" tabs-type="tabs-positive" animate-nav="false">
+        <!-- Find Dpers tab -->
+        <tab title="找人" icon-on="icon ion-ios7-search-strong" icon-off="icon ion-ios7-search">
 
-    <!-- Pets tab -->
-    <tab title="Pets" icon="icon ion-home" ng-controller="PetsTabCtrl">
-      <content has-header="true" has-tabs="true">
-        <list>
-          <item ng-repeat="pet in pets" type="item-text-wrap" href="#/pet/{{pet.id}}">
-              <h3>{{pet.title}}</h3>
-              <p>{{pet.description}}</p>
-            </item>
-          </item>
-        </list>
-      </content>
-    </tab>
+            <content has-header="true" has-tabs="true">
 
-    <!-- Adoption tab -->
-    <tab title="Adopt" icon="icon ion-heart">
-      <content has-header="true" has-tabs="true">
-        <div class="padding">
-          <h2>Adopt a pet today.</h2>
-        </div>
-        <div class="list list-inset">
-          <label class="item item-input">
-            <span class="input-label">Your name</span>
-            <input type="text">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Your email</span>
-            <input type="password">
-          </label>
-          <label class="item item-input">
-            <textarea placeholder="Any more info?"></textarea>
-          </label>
-          <button class="button button-positive button-block">Adopt</button>
-        </div>
-      </content>
-    </tab>
+                <div class="item item-input-inset" ng-controller="SearchAreaCtrl">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="输入员工姓名开始查找..." ngc-focus="{searching:true}"
+                               ngc-blur="{searching:false}">
+                        <button class="button button-clear" ng-show="searching">
+                            取消
+                        </button>
+                    </label>
+                </div>
 
-    <!-- Home tab -->
-    <tab title="About" icon="icon ion-search">
-      <content has-header="true" has-tabs="true" padding="true">
-        <h3>About this app</h3>
-        <p>
-          This is a sample seed project for the Ionic Framework. Please change it to match your needs.
-        </p>
-      </content>
-    </tab>
+                <!--Common Contacts Area -->
+                <div ng-controller="CommonContactsAreaCtrl">
+                    <list>
+                        <div class="item item-divider">
+                            常用联系方式
+                        </div>
 
-  </tabs>
+                        <div ng-repeat="commonContact in commonContacts">
+                            <a class="item item-avatar" ng-href="#/commonContact/{{commonContact.id}}">
+                                <img ng-src="{{commonContact.avatar}}">
+
+                                <h3>{{commonContact.title}}</h3>
+
+                                <p>{{commonContact.description}}</p>
+                            </a>
+                        </div>
+                    </list>
+                </div>
+
+                <!--Starred Contacts Area -->
+                <div ng-controller="StarredContactsAreaCtrl">
+                    <list>
+                        <div class="item item-divider">
+                            星标联系人
+                        </div>
+                        <div ng-repeat="starredContact in starredContacts">
+                            <a class="item item-avatar" ng-href="#/contact/{{starredContact.id}}">
+                                <img ng-src="{{starredContact.avatar}}">
+
+                                <h3>{{starredContact.name}}</h3>
+
+                                <p>{{starredContact.description}}</p>
+                            </a>
+                        </div>
+                    </list>
+                </div>
+
+            </content>
+        </tab>
+
+        <!-- My Profile tab -->
+        <tab title="我" icon-on="icon ion-ios7-person" icon-off="icon ion-ios7-person-outline"
+             ng-controller="ProfileTabCtrl">
+            <content has-header="true" has-tabs="true">
+                <!--Basic Info-->
+                <div class="item item-avatar">
+                    <img ng-src="{{profile.avatar}}">
+
+                    <h2>{{profile.name}}</h2>
+
+                    <p>{{profile.description}}</p>
+                </div>
+
+                <div class="item item-divider">
+                </div>
+
+                <div class="item item-icon-left">
+                    <i class="icon ion-ios7-people"></i>部门
+                    <span class="item-note">{{profile.department}}</span>
+                </div>
+
+                <div class="item item-icon-left">
+                    <i class="icon ion-ios7-telephone"></i>手机
+                    <span class="item-note">{{profile.mobile}}</span>
+                </div>
+            </content>
+        </tab>
+
+        <!-- More tab -->
+        <tab title="更多" icon-on="icon ion-more" icon-off="icon ion-ios7-more-outline">
+            <content has-header="true" has-tabs="true">
+                <list>
+                    <a class="item" href="#/updateVersion">
+                        版本更新
+                    </a>
+                    <a class="item" href="#/clearCache">
+                        清除缓存
+                    </a>
+                </list>
+            </content>
+        </tab>
+
+    </tabs>
 </nav-page>
